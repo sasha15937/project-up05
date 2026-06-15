@@ -3,63 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>3D Model</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <script src = "scripts.js" defer></script>
 </head>
 <body>
-    <header>
-        <section>
-            <logo>...</logo>
-           <nav>
-                <a>Главная</a>
-                <a>Наши работы</a>
-                <a>О нас</a>
-           </nav>
-        </section>
-        <button>Заказать 3D-модель</button>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <img src="assets/logo.png" alt="Логотип">
+        </div>
+        <nav class="main-nav">
+            <a href="#">Главная</a>
+            <a href="#">Наши работы</a>
+            <a href="#">О нас</a>
+        </nav> 
+        <a href="#" class="btn btn-primary">Заказать 3D-модель</a>
     </header>
+
     <main>
-        <section>
-            <h1>3D</h1>
-            <h1>MODEL</h1>
-            <button>Заказать 3D-модель</button>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <h1 class="hero-title">3D <span class="hero-title--span">МОДЕЛИ</span></h1>
+            <a href="#" class="btn btn-primary">Заказать 3D-модель</a>
         </section>
-        <section>
-            <h2>О 3D-моделях</h2>
-            <p>Text</p>
-            <!--img-->
+
+        <!-- About Section -->
+        <section class="section about-section">
+            <div class="about-content">
+                <h2 class="section-title">О 3D-моделях</h2>
+                <p>3D-моделирование — это процесс создания трёхмерных объектов (моделей), их форм, текстур, свойств и поведения в пространстве с использованием специализированного программного обеспечения. Такие модели применяются в различных сферах: архитектуре, дизайне, промышленности, рекламе, игровой индустрии  и анимации.</p>
+                <p>На нашем сайте вы можете заказать разработку 3D-моделей любой сложности по индивидуальному техническому заданию. Специалисты создают модели с учетом требований заказчика, соблюдая современные стандарты качества и точности. Готовые модели могут использоваться для визуализации проектов, 3D-печати, компьютерной графики и других задач.</p>
+            </div>
+            <div class="about-image-placeholder">
+                <p>Какая-нибудь 3д-модель<br>(сделанная нами)</p>
+            </div>
         </section>
-        <section>
-            <h2>Примеры работ</h2>
-            <!--Слайдер-->
+
+        <!-- Portfolio Section -->
+        <section class="section portfolio-section">
+            <h2 class="section-title">Примеры работ</h2>
+            <div class="slider-container">
+                <button class="slider-btn slider-btn-prev">&larr;</button>
+                <div class="slider-item"></div>
+                <div class="slider-item active">
+                    <span>слайдер</span>                </div>
+                <div class="slider-item"></div>
+                <button class="slider-btn slider-btn-next">&rarr;</button>
+            </div>
         </section>
-        <section>
-            <h2>Почему выбирают нас</h2>
-            <p>Наши преимущества</p>
-            <!--Какое-то изображение-->
+
+        <!-- Why Us Section -->
+        <section class="section why-us-section">
+            <h2 class="section-title">Почему выбирают нас</h2>
+            <div class="why-us-content">
+                <div class="why-us-image-placeholder"></div>
+                <div class="why-us-text">
+                    <p>Наши преимущества</p>
+                    <ul>
+                        <li>Инженерская точность — Мы не просто «рисуем картинки». Мы создаём модели с учетом реальных физических ограничений, допусков и особенностей будущего производства или 3D-печати.</li>
+                        <li>Мышиная скорость — Понимаем, что время – деньги. Первые черновики вы получаете уже через 24 часа после согласования ТЗ.</li>
+                        <li>Гибкость в правах — Не угадали с первого раза? Без проблем. Мы включаем до 3-х итераций правок в стоимость, чтобы результат был на 100% таким, как вы задумали.</li>
+                        <li>Все форматы на свете — Работаем в Blender, Maya, ZBrush, SolidWorks, 3ds Max. Выдаем результат в любом нужном вам формате: STL, OBJ, FBX, STEP, IGES.</li>
+                    </ul>
+                </div>
+            </div>
         </section>
-        <section>
-            <h2>Отзывы</h2>
-            <!--Удивительно отзывы-->
+
+        <!-- Reviews Section -->
+        <section class="section reviews-section">
+            <h2 class="section-title">Отзывы</h2>
+            <div class="reviews-grid">
+                <div class="review-item"></div>
+                <div class="review-item"></div>
+                <div class="review-item"></div>
+                <div class="review-item"></div>
+            </div>
+            <a href="#" class="more-reviews-link">Больше отзывов ></a>
         </section>
     </main>
-    <footer>
-        <h3>Сайт разработан:</h3>
-        <p>Студентами колледжа -</p>
-        <p>Андруневич Андрей</p>
-        <p>Бинерт Александр</p>
-        <p>Иванова Анжелика</p>
-        <p>Шайдуллинова Жанель</p>
-        <p>Яковлева Виктория</p>
-        <h3>Навигация</h3>
-        <nav>
-            <a>О нас</a>
-            <a>Главная</a>
-            <a>Наши работы</a>
-            <a>Заказать 3D-модель</a>
-        </nav>
-        <p>2026г.</p>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-left">
+            <p><strong>Сайт разработан:</strong></p>
+            <p>Студентами колледжа -</p>
+            <p>Андруневич Андрей</p>
+            <p>Бинерт Александр</p>
+            <p>Иванова Анжелика</p>
+            <p>Шайдуллинова Жанель</p>
+            <p>Яковлева Виктория</p>
+        </div>
+        <div class="footer-right">
+            <p><strong>Навигация:</strong></p>
+            <a href="#">О нас</a>
+            <a href="#">Главная</a>
+            <a href="#">Наши работы</a>
+            <a href="#">Заказать 3D-модель</a>
+            <p class="copyright">2026г.</p>
+        </div>
     </footer>
 </body>
 </html>
