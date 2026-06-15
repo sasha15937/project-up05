@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3D Model</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
 </head>
+
 <body>
 
     <!-- Header -->
@@ -20,26 +23,32 @@
             <a href="#">Главная</a>
             <a href="#">Наши работы</a>
             <a href="#">О нас</a>
-        </nav> 
-        <a href="#" class="btn btn-primary">Заказать 3D-модель</a>
+        </nav>
+        <a href="#" class="btn btn-primary" id="show-popup">Заказать 3D-модель</a>
     </header>
 
     <main>
         <!-- Hero Section -->
         <section class="hero-section">
             <h1 class="hero-title">3D <span class="hero-title--span">МОДЕЛИ</span></h1>
-            <a href="#" class="btn btn-primary">Заказать 3D-модель</a>
+            <a href="#" class="btn btn-primary" id="show-popup">Заказать 3D-модель</a>
         </section>
 
         <!-- About Section -->
         <section class="section about-section">
             <div class="about-content">
                 <h2 class="section-title">О 3D-моделях</h2>
-                <p>3D-моделирование — это процесс создания трёхмерных объектов (моделей), их форм, текстур, свойств и поведения в пространстве с использованием специализированного программного обеспечения. Такие модели применяются в различных сферах: архитектуре, дизайне, промышленности, рекламе, игровой индустрии  и анимации.</p>
-                <p>На нашем сайте вы можете заказать разработку 3D-моделей любой сложности по индивидуальному техническому заданию. Специалисты создают модели с учетом требований заказчика, соблюдая современные стандарты качества и точности. Готовые модели могут использоваться для визуализации проектов, 3D-печати, компьютерной графики и других задач.</p>
+                <p>3D-моделирование — это процесс создания трёхмерных объектов (моделей), их форм, текстур, свойств и
+                    поведения в пространстве с использованием специализированного программного обеспечения. Такие модели
+                    применяются в различных сферах: архитектуре, дизайне, промышленности, рекламе, игровой индустрии и
+                    анимации.</p>
+                <p>На нашем сайте вы можете заказать разработку 3D-моделей любой сложности по индивидуальному
+                    техническому заданию. Специалисты создают модели с учетом требований заказчика, соблюдая современные
+                    стандарты качества и точности. Готовые модели могут использоваться для визуализации проектов,
+                    3D-печати, компьютерной графики и других задач.</p>
             </div>
-            <div class="about-image-placeholder">
-                <p>Какая-нибудь 3д-модель<br>(сделанная нами)</p>
+            <div class="about-image">
+                <img src="assets/беседка.png">
             </div>
         </section>
 
@@ -48,10 +57,15 @@
             <h2 class="section-title">Примеры работ</h2>
             <div class="slider-container">
                 <button class="slider-btn slider-btn-prev">&larr;</button>
-                <div class="slider-item"></div>
+                <div class="slider-item">
+                    <img src="assets/дерево.png">
+                </div>
                 <div class="slider-item active">
-                    <span>слайдер</span>                </div>
-                <div class="slider-item"></div>
+                    <img src="assets/змея.png">
+                </div>
+                <div class="slider-item">
+                    <img src="assets/слон.png">
+                </div>
                 <button class="slider-btn slider-btn-next">&rarr;</button>
             </div>
         </section>
@@ -60,14 +74,20 @@
         <section class="section why-us-section">
             <h2 class="section-title">Почему выбирают нас</h2>
             <div class="why-us-content">
-                <div class="why-us-image-placeholder"></div>
+                <div class="why-us-image">
+                    <img src="assets/стол.png">
+                </div>
                 <div class="why-us-text">
                     <p>Наши преимущества</p>
                     <ul>
-                        <li>Инженерская точность — Мы не просто «рисуем картинки». Мы создаём модели с учетом реальных физических ограничений, допусков и особенностей будущего производства или 3D-печати.</li>
-                        <li>Мышиная скорость — Понимаем, что время – деньги. Первые черновики вы получаете уже через 24 часа после согласования ТЗ.</li>
-                        <li>Гибкость в правах — Не угадали с первого раза? Без проблем. Мы включаем до 3-х итераций правок в стоимость, чтобы результат был на 100% таким, как вы задумали.</li>
-                        <li>Все форматы на свете — Работаем в Blender, Maya, ZBrush, SolidWorks, 3ds Max. Выдаем результат в любом нужном вам формате: STL, OBJ, FBX, STEP, IGES.</li>
+                        <li>Инженерская точность — Мы не просто «рисуем картинки». Мы создаём модели с учетом реальных
+                            физических ограничений, допусков и особенностей будущего производства или 3D-печати.</li>
+                        <li>Мышиная скорость — Понимаем, что время – деньги. Первые черновики вы получаете уже через 24
+                            часа после согласования ТЗ.</li>
+                        <li>Гибкость в правах — Не угадали с первого раза? Без проблем. Мы включаем до 3-х итераций
+                            правок в стоимость, чтобы результат был на 100% таким, как вы задумали.</li>
+                        <li>Все форматы на свете — Работаем в Blender, Maya, ZBrush, SolidWorks, 3ds Max. Выдаем
+                            результат в любом нужном вам формате: STL, OBJ, FBX, STEP, IGES.</li>
                     </ul>
                 </div>
             </div>
@@ -84,6 +104,49 @@
             </div>
             <a href="#" class="more-reviews-link">Больше отзывов ></a>
         </section>
+        <div class="popup-overlay" id="popup-overlay">
+            <div class="popup">
+                <button class="popup-close">&times;</button>
+                <h2>Свяжитесь с нами</h2>
+                <p>Заполните форму, и мы свяжемся с вами в ближайшее время.</p>
+                <form id="popup-form">
+                    <div style="margin-bottom: 15px">
+                        <label for="popup-name" style="display: block; margin-bottom: 5px">
+                            Имя
+                        </label>
+                        <input type="text" id="popup-name" style="
+                                width: 100%;
+                                padding: 10px;
+                                border: 1px solid var(--medium-gray);
+                                border-radius: 4px;
+                            " />
+                    </div>
+                    <div style="margin-bottom: 15px">
+                        <label for="popup-email" style="display: block; margin-bottom: 5px">
+                            Email
+                        </label>
+                        <input type="email" id="popup-email" style="
+                                width: 100%;
+                                padding: 10px;
+                                border: 1px solid var(--medium-gray);
+                                border-radius: 4px;
+                            " />
+                    </div>
+                    <div style="margin-bottom: 15px">
+                        <label for="popup-phone" style="display: block; margin-bottom: 5px">
+                            Телефон
+                        </label>
+                        <input type="tel" id="popup-phone" style="
+                                width: 100%;
+                                padding: 10px;
+                                border: 1px solid var(--medium-gray);
+                                border-radius: 4px;
+                            " />
+                            <button type="submit" class="btn btn-submit">Оформить заказ</button>
+                    </div>
+
+
+
     </main>
 
     <!-- Footer -->
@@ -107,4 +170,5 @@
         </div>
     </footer>
 </body>
+
 </html>

@@ -1,4 +1,4 @@
-/* Базовые стили */
+
 * {
     margin: 0;
     padding: 0;
@@ -6,12 +6,11 @@
 }
 
 body {
-    font-family: "Jura", sans-serif;
+    font-family: 'Jura', Arial, sans-serif;
     background-color: #ffffff;
     color: #000000;
     line-height: 1.5;
 }
-
 
 .container {
     max-width: 1200px;
@@ -27,6 +26,9 @@ body {
     border-radius: 25px;
     font-weight: bold;
     transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
 }
 
 .btn-primary {
@@ -43,18 +45,22 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 40px;
+    padding: 10px 30px;
     border-bottom: 1px solid #e0e0e0;
+    gap: 20px
 }
-
 .logo {
-    display: flex;    align-items: center;
-    gap: 10px;
-    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    font-weight: bold;
 }
 
 .logo img {
     border-radius: 50%;
+    width: 180px;
+    object-fit: cover;
 }
 
 .main-nav a {
@@ -81,13 +87,11 @@ body {
     line-height: 1;
     margin-bottom: 30px;
     display: grid;
-    /* grid-template-areas: 2 2; */
     text-align: right;
 }
-
 .hero-title--span {
-    grid-column-start: 2;
     grid-row-start: 2;
+    grid-column-start: 2;
     text-align: left;
 }
 
@@ -100,29 +104,33 @@ body {
 
 .section-title {
     font-size: 28px;
-    font-weight: normal;
+    font-weight: 550;
     margin-bottom: 20px;
-}
 
+}
 /* Секция "О 3D-моделях" */
 .about-section {
-    display: flex;    gap: 40px;
+    display: flex;
+    gap: 40px;
+    align-items: center;
 }
 
 .about-content {
     flex: 1;
 }
 
-.about-image-placeholder {
+.about-image {
     flex: 1;
-    background-color: #dcdcdc;
     min-height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #888;
-    font-size: 14px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 /* Секция "Примеры работ" */
@@ -135,6 +143,10 @@ body {
 .slider-item {
     flex-grow: 1;
     height: 200px;
+    overflow: hidden;
+    border-radius: 8px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
     background-color: #dcdcdc;
     display: flex;
     align-items: center;
@@ -143,7 +155,15 @@ body {
 }
 
 .slider-item.active {
-    background-color: #cccccc;
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.slider-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .slider-btn {
@@ -152,11 +172,13 @@ body {
     border-radius: 50%;
     background-color: #b0b0b0;
     color: white;
-    border: none;
+    border: none;    
     font-size: 20px;
     cursor: pointer;
-    display: flex;    align-items: center;
+    display: flex;
+    align-items: center;
     justify-content: center;
+    transition: background-color 0.3s ease;
 }
 
 /* Секция "Почему выбирают нас" */
@@ -165,16 +187,28 @@ body {
     gap: 40px;
 }
 
-.why-us-image-placeholder {
+.why-us-image {
     flex: 1;
-    background-color: #dcdcdc;
-    min-height: 300px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.why-us-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .why-us-text {
     flex: 1;
     display: flex;
+    flex-direction: column;
     align-items: center;
+    p {
+        padding: 1rem;
+        font-size: 16pt;
+    }
 }
 
 /* Секция "Отзывы" */
@@ -201,10 +235,11 @@ body {
 .footer {
     display: flex;
     justify-content: space-between;
-    padding: 40px;
+    padding: 40px;    
     border-top: 1px solid #e0e0e0;
     font-size: 14px;
 }
+
 .footer-left p, .footer-right p {
     margin-bottom: 5px;
 }
@@ -220,8 +255,56 @@ body {
     margin-top: 20px;
 }
 
+.popup-overlay {
+    display: none;
+}
+
+.popup-close {
+    color: #fff;
+    background-color: #000;
+    position: relative;
+    padding: 2px 8px;
+    font-size: 28px;
+    font-weight: bold;    
+    cursor: pointer;
+    border: none;
+    border-radius: 1rem;
+}
+
+.popup-overlay.show {
+    padding: 2rem;
+    margin: auto auto;
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00000080;
+    .popup {
+        padding: 2rem;
+        border-radius: 1rem;
+        background-color: #dfdfdf;
+    }
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 15px;    
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background-color: #333;
+}
+
 /* Адаптивность для мобильных устройств */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .header {
         flex-direction: column;
         gap: 15px;
@@ -244,4 +327,4 @@ body {
         flex-direction: column;
         gap: 30px;
     }
-}
+} */
